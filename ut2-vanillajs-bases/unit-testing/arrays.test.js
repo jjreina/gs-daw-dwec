@@ -1,9 +1,21 @@
-import { deleteFirtPosition, deleteLastPosition } from "./arrays";
+import * as arrays from "./arrays";
 
-it("remove first element from array", () => {
-  expect(deleteFirtPosition()).toBe("Zelda");
-});
+describe("Basics array methos", () => {
+  it("should removes first element from array", () => {
+    expect(arrays.deleteFirtPosition()).toBe("Zelda");
+  });
 
-it("remove last element from array", () => {
-  expect(deleteLastPosition()).toBe("Chrono");
+  it("should removes last element from array", () => {
+    expect(arrays.deleteLastPosition()).toBe("Chrono");
+  });
+
+  it("should inserts new element at the start of an array", () => {
+    expect(arrays.addFirstPosition("Fornite")).toBe(3);
+    expect(arrays.games[0]).toBe("Fornite");
+  });
+
+  it("should appends new element to the end of an array", () => {
+    expect(arrays.addLastPosition("Pokemon")).toBe(4);
+    expect(arrays.games[arrays.games.length - 1]).toBe("Pokemon");
+  });
 });
