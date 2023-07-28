@@ -31,3 +31,74 @@ export const addFirstPosition = (item) => {
 export const addLastPosition = (item) => {
   return games.push(item);
 };
+
+/******************************************************/
+export const got = [
+  "Lannister",
+  "Targaryen",
+  "Stark",
+  "Baratheon",
+  "Greyjoy",
+  "Arryn",
+  "Martell",
+];
+
+/**
+ * Removes Baratheon and Greyjoy houses
+ * @returns array with items removes
+ */
+export const removeBaratheonAndGreyjoy = () => {
+  return got.splice(3, 2);
+};
+
+/**
+ * Removes Arryn house
+ * @returns array with items removes
+ */
+export const removeArryn = () => {
+  return got.splice(3, 1);
+};
+
+/******************************************************/
+export const narutoCharacters = [
+  "Naruto",
+  "Sasuke",
+  "Sakura",
+  "Hinata",
+  "Kakashi",
+  "Jiraiya",
+  "Itachi",
+  "Gaara",
+];
+
+/**
+ * Gets the index of Naruto
+ * @returns the index found.
+ */
+export const getNaruto = () => {
+  return narutoCharacters.indexOf("Naruto");
+};
+
+/**
+ * Gets the index of Gaara
+ * @returns the index found.
+ */
+export const getGaara = () => {
+  return narutoCharacters.indexOf("Gaara");
+};
+
+/**
+ * Gets the index of Rock Lee
+ * @returns the index found.
+ */
+export const getRockLee = () => {
+  return narutoCharacters.indexOf("Rock Lee");
+};
+
+/**
+ * Reverses the elements in Naruto Characters array
+ * @returns the reversed given array
+ */
+export const reverseNarutoCharacters = () => {
+  return narutoCharacters.reverse();
+};
