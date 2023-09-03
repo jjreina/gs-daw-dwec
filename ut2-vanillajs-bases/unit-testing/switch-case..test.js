@@ -1,6 +1,6 @@
 import * as sc from "./switch-case";
 
-describe("switch-case", () => {
+describe("switch-case days of week", () => {
   it('should returns "Lunes" for the number 1', () => {
     expect(sc.getDayOfWeekSC(1)).toBe("Lunes");
     expect(sc.getDayOfWeekObject(1)).toBe("Lunes");
@@ -37,5 +37,32 @@ describe("switch-case", () => {
   it('should returns "Número de día inválido" outside the range 1-7', () => {
     expect(sc.getDayOfWeekSC(8)).toBe("Número de día inválido");
     expect(sc.getDayOfWeekObject(8)).toBe("Número de día inválido");
+  });
+});
+
+describe("switch-case simple calcular", () => {
+  it("should returns 7", () => {
+    expect(sc.simpleCalculatorSC("+", 5, 2)).toBe(7);
+    expect(sc.simpleCalculatorObject("+", 5, 2)).toBe(7);
+  });
+
+  it("should returns -2", () => {
+    expect(sc.simpleCalculatorSC("-", 8, 10)).toBe(-2);
+    expect(sc.simpleCalculatorObject("-", 8, 10)).toBe(-2);
+  });
+
+  it("should returns 24", () => {
+    expect(sc.simpleCalculatorSC("*", 6, 4)).toBe(24);
+    expect(sc.simpleCalculatorObject("*", 6, 4)).toBe(24);
+  });
+
+  it("should returns 5", () => {
+    expect(sc.simpleCalculatorSC("/", 35, 7)).toBe(5);
+    expect(sc.simpleCalculatorObject("/", 35, 7)).toBe(5);
+  });
+
+  it('should returns "Operator invalid"', () => {
+    expect(sc.simpleCalculatorSC("$", 35, 7)).toBe("Operator invalid");
+    expect(sc.simpleCalculatorObject("$", 35, 7)).toBe("Operator invalid");
   });
 });
