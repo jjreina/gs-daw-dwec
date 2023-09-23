@@ -33,3 +33,5 @@ console.table([
   { name: name2, age: age2, city: city2 },
   { name: name3, age: age3, city: city3 },
 ]);
+
+window.alert("Try me!!");
