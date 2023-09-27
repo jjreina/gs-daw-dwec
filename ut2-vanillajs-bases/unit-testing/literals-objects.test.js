@@ -1,4 +1,4 @@
-import * as literals from "./literals-objects";
+import * as literals from "./literals-objects_solution";
 
 describe("Access to the properties of person object literal", () => {
   it("should returns the street of person object", () => {
