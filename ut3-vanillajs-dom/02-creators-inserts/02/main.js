@@ -1,5 +1,6 @@
 const body = document.querySelector("body");
 
+const div = document.createElement("div");
 const h1 = document.createElement("h1");
 const p = document.createElement("p");
 const form = document.createElement("form");
@@ -9,6 +10,7 @@ const label_quantity = document.createElement("label");
 const input_datemax = document.createElement("input");
 const input_datemin = document.createElement("input");
 const input_quantity = document.createElement("input");
+const input_submit = document.createElement("input");
 const br = document.createElement("br");
 
 h1.textContent = "The input min and max attributes";
@@ -30,13 +32,17 @@ input_datemin.id = "datemin";
 input_datemin.name = "datemin";
 input_datemin.max = "2000-01-02";
 
-label_quantity.textContent = "Enter a date after 2000-01-01: ";
-input_quantity.type = "date";
-input_quantity.id = "datemin";
-input_quantity.name = "datemin";
-input_quantity.max = "2000-01-02";
+label_quantity.textContent = "Quantity (between 1 and 5): ";
+input_quantity.type = "number";
+input_quantity.id = "quantity";
+input_quantity.name = "quantity";
+input_quantity.min = "1";
+input_quantity.max = "5";
 
-form.appendChild(label_datemax);
+input_submit.type = "submit";
+input_submit.value = "Submit";
+
+/*form.appendChild(label_datemax);
 form.appendChild(input_datemax);
 form.appendChild(br);
 form.appendChild(br.cloneNode());
@@ -47,7 +53,24 @@ form.appendChild(br.cloneNode());
 form.appendChild(br.cloneNode());
 
 form.appendChild(label_quantity);
+form.appendChild(input_quantity);
+form.appendChild(br.cloneNode());
+form.appendChild(br.cloneNode());
 
-body.appendChild(h1);
-body.appendChild(p);
-body.appendChild(form);
+form.appendChild(input_submit);*/
+form.append(label_datemax, input_datemax, br, br.cloneNode());
+form.append(label_datemin, input_datemin, br.cloneNode(), br.cloneNode());
+form.append(label_quantity, input_quantity, br.cloneNode(), br.cloneNode());
+form.append(input_submit);
+
+/*div.appendChild(h1);
+div.appendChild(br.cloneNode());*/
+div.append(h1, br.cloneNode());
+
+/*div.appendChild(p);
+div.appendChild(br.cloneNode());*/
+div.append(p, br.cloneNode());
+
+div.appendChild(form);
+
+body.appendChild(div);
