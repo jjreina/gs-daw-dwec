@@ -1,7 +1,6 @@
 const body = document.querySelector("body");
 
 const div = document.createElement("div");
-const div = document.createElement("div");
 const h1 = document.createElement("h1");
 const p = document.createElement("p");
 const form = document.createElement("form");
@@ -11,7 +10,6 @@ const label_quantity = document.createElement("label");
 const input_datemax = document.createElement("input");
 const input_datemin = document.createElement("input");
 const input_quantity = document.createElement("input");
-const input_submit = document.createElement("input");
 const input_submit = document.createElement("input");
 const br = document.createElement("br");
 
