@@ -24,12 +24,28 @@ input_datemax.id = "datemax";
 input_datemax.name = "datemax";
 input_datemax.max = "1979-12-31";
 
+label_datemin.textContent = "Enter a date after 2000-01-01: ";
+input_datemin.type = "date";
+input_datemin.id = "datemin";
+input_datemin.name = "datemin";
+input_datemin.max = "2000-01-02";
+
+label_quantity.textContent = "Enter a date after 2000-01-01: ";
+input_quantity.type = "date";
+input_quantity.id = "datemin";
+input_quantity.name = "datemin";
+input_quantity.max = "2000-01-02";
+
 form.appendChild(label_datemax);
 form.appendChild(input_datemax);
 form.appendChild(br);
-form.appendChild(br);
+form.appendChild(br.cloneNode());
 
 form.appendChild(label_datemin);
+form.appendChild(input_datemin);
+form.appendChild(br.cloneNode());
+form.appendChild(br.cloneNode());
+
 form.appendChild(label_quantity);
 
 body.appendChild(h1);
