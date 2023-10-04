@@ -22,5 +22,7 @@ span_1.textContent = "Span 1";
 container.appendChild(p_1);
 container.appendChild(p_2);
 container.insertBefore(span_1, p_2);
-//container.replaceChild(p_2, p_1);
+const newSpan = document.createElement("span");
+newSpan.textContent = "Nuevo span usando replaceChildren";
+container.replaceChildren(newSpan);
 // container.removeChild(p_2);

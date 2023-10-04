@@ -1,0 +1,13 @@
+const container = document.querySelector(".container");
+const p_1 = document.createElement("p");
+const p_2 = document.createElement("p");
+const span_1 = document.createElement("span");
+p_1.textContent = "Párrafo 1";
+p_2.textContent = "Párrafo 2";
+span_1.textContent = "Span 1";
+container.appendChild(p_1);
+container.appendChild(p_2);
+container.insertBefore(span_1, p_2);
+const newSpan = document.createElement("span");
+newSpan.textContent = "Nuevo span usando replaceWith";
+container.replaceWith(newSpan);
