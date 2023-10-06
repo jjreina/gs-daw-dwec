@@ -1,5 +1,6 @@
 const body = document.querySelector("body");
-body.classList = "p-3 m-0 border-0 bd-example";
+// body.classList = "p-3 m-0 border-0 bd-example";
+body.classList.add("p-3", "m-0", "border-0", "bd-example");
 
 const div = document.createElement("div");
 div.className = "list-group";
