@@ -12,7 +12,7 @@ body.appendChild(p);
 console.log(p.childNodes[0]);
 console.log(p.childNodes[1]);
 console.log(p.isConnected);*/
-const container = document.querySelector(".container");
+/*const container = document.querySelector(".container");
 const p_1 = document.createElement("p");
 const p_2 = document.createElement("p");
 const span_1 = document.createElement("span");
@@ -25,4 +25,18 @@ container.insertBefore(span_1, p_2);
 const newSpan = document.createElement("span");
 newSpan.textContent = "Nuevo span usando replaceChildren";
 container.replaceChildren(newSpan);
+span_1.onclick((e) => {
+  alert("Hello World!!!");
+});
+
+span_1.addEventListener("click", (e) => {
+  alert("Hello World!!!");
+});*/
 // container.removeChild(p_2);
+const button = document.querySelector("button");
+const clickAction = () => alert("Click Event");
+const mouseEnterAction = () => alert("Mouse Enter Event");
+const mouseLeaveAction = () => alert("Mouse Leave Event");
+button.addEventListener("click", clickAction, bub);
+//button.addEventListener("mouseenter", mouseEnterAction);
+//button.addEventListener("mouseleave", mouseLeaveAction);
