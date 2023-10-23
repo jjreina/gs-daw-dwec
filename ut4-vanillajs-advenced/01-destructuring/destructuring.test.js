@@ -1,4 +1,4 @@
-import * as desctructure from "./destructuring";
+import * as desctructure from "./destructuring_solution";
 
 describe("Arryas Destructuring", () => {
   it("should gets all tecnologies", () => {
