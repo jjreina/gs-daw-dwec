@@ -20,10 +20,10 @@ const getPerson = (person) => {
 };
 
 const cars = ["Audi", "Mercedes", "BMW", "Tesla"];
-
-const getCars = (cars) => {
+const getCars = () => {
   return cars;
 };
 
-[Primero, , , Ultimo] = getCars(cars);
-console.log(Primero, Ultimo);
+let [, secondCar] = cars;
+let str = `Literal strings: ${getCars()[0]} ${secondCar}`;
+console.log(str);
