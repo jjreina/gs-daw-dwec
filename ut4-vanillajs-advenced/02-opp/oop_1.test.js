@@ -1,4 +1,4 @@
-import { Books } from "./oop";
+import { Books } from "./oop_1";
 
 describe("OOP", () => {
   it("should gets title, author and published for La vida del lazarillo de Tormes", () => {
