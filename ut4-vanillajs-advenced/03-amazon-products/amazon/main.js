@@ -16,26 +16,31 @@ let product = new Product(
 
 const container = document.querySelector(".container");
 const ul = document.createElement("ul");
-let keysProducts = Object.keys(product);
-let valuesProducts = Object.values(product);
-keysProducts.forEach((item, index) => {
-  let li = document.createElement("li");
-  let p = document.createElement("p");
-  p.textContent = `${item} = ${valuesProducts[index]}`;
-  if (item === "price") {
-    p.textContent = `${item} = ${valuesProducts[4].currentPrice} ${valuesProducts[4].currency}`;
+let keysProduct = Object.keys(product);
+let valuesProduct = Object.values(product);
+
+const createReviewItem = (object, ul) => {
+  let values = Object.values(object);
+  Object.keys(object).forEach((item, i) => {
+    let li = document.createElement("li");
+    let p = document.createElement("p");
+    p.textContent = `${item} = ${values[i]}`;
     li.appendChild(p);
     ul.appendChild(li);
-  } else if (item === "review") {
-    let values = Object.values(valuesProducts[index]);
-    Object.keys(valuesProducts[index]).forEach((item, i) => {
-      let li = document.createElement("li");
-      let p = document.createElement("p");
-      p.textContent = `${item} = ${values[i]}`;
-      li.appendChild(p);
-      ul.appendChild(li);
-    });
+  });
+};
+
+keysProduct.forEach((item, index) => {
+  let li = document.createElement("li");
+  let p = document.createElement("p");
+
+  if (item === "review") {
+    createReviewItem(valuesProduct[index], ul);
   } else {
+    p.textContent =
+      item === "price"
+        ? `${item} = ${valuesProduct[index].currentPrice} ${valuesProduct[index].currency}`
+        : `${item} = ${valuesProduct[index]}`;
     li.appendChild(p);
     ul.appendChild(li);
   }
