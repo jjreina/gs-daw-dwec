@@ -38,20 +38,6 @@ body {
   border-radius: 10px;
 }
 
-.close {
-  color: black;
-  float: right;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
 h2 {
   margin-bottom: 5px;
 }
