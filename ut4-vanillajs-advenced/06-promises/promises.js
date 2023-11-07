@@ -43,3 +43,11 @@ export const calcultePow = (array) => {
     }
   });
 };
+
+/*
+calcultePow([1, 2])
+  .then((elemnt) => elemnt.map((e) => e + 1)) // 1, 4 -> 2, 5
+  .then((elemnt) => elemnt.map((e) => e + 1)) // 3, 6
+  .then((elemnt) => calcultePow(elemnt)) // 9, 36
+  .then((elemnt) => console.log(elemnt));
+*/
