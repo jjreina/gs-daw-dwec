@@ -67,3 +67,25 @@ myPromise([1, 2, 3])
   })
   .finally(() => console.log("All eperations finished"));
   */
+
+const myPromise = (array) => {
+  return new Promise((resolve) => {
+    let newArray = array.map((item) => item + 1);
+    resolve(newArray);
+  });
+};
+
+myPromise([1, 2, 3])
+  .then((result) => myPromise(result))
+  .then((result) => myPromise(result))
+  .then((result) => console.log("Promise: " + result))
+  .catch((error) => console.log(error))
+  .finally(() => console.log("All ok"));
+
+async function res() {
+  let result = await myPromise([1, 2, 3]);
+  result = await myPromise(result);
+  result = await myPromise(result);
+  console.log("Async/Await: " + result);
+}
+res();
