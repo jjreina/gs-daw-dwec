@@ -21,11 +21,42 @@ export const promeseGetCarsFrom2010 = (cars) => {
   });
 };
 
-/*
-export async function getCars(array) {
-  let carsClass = await promeseConverToClase(array);
-  let carsNewer2010 = await promeseGetCarsFrom2010(carsClass);
-}
-*/
+export const promeseGetCarsByYears = (cars, year) => {
+  return new Promise((resolve) => {
+    let carsByYear = cars.filter((car) => car.year >= parseInt(year));
+    resolve(carsByYear);
+  });
+};
 
-// getCars(cars);
+export const promeseGetCarsByMakeOrModelOrType = (cars, fiterSelected) => {
+  return new Promise((resolve) => {
+    let carsByYear = cars.filter((car) => car[fiterSelected] === fiterSelected);
+    resolve(carsByYear);
+  });
+};
+
+export const promeseGetCarsByFilters = (cars, year, make, model, type) => {
+  return new Promise((resolve) => {
+    let carsByYear = cars.filter((car) => {
+      return year !== "ALL" ? car.year >= parseInt(year) : car;
+    });
+    let carsByMake = carsByYear.filter((car) => {
+      return make !== "ALL" ? car.make === make : car;
+    });
+    let carsByModel = carsByMake.filter((car) => {
+      return model !== "ALL" ? car.model === model : car;
+    });
+    let carsByType = carsByModel.filter((car) => {
+      return type !== "ALL" ? car.type === type : car;
+    });
+    resolve(carsByType);
+  });
+};
+
+export const getFiltersValue = (cars, value) => {
+  let arrayFiltered = new Set();
+  cars.forEach((item) => {
+    arrayFiltered.add(item[value]);
+  });
+  return arrayFiltered;
+};
