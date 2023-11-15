@@ -6,13 +6,13 @@
 
 body {
   font-family: "Courier New", Courier, monospace;
-  background-color: #6c5f5b;
+  background-color: #d2e0fb;
   color: #f6f1ee;
 }
 
 h1 {
   text-align: center;
-  background-color: #4f4a45;
+  background-color: #8eaccd;
 }
 
 .container {
@@ -21,16 +21,26 @@ h1 {
   display: flex;
   align-items: center;
   flex-direction: column;
-  border: 2px solid white;
   row-gap: 20px;
 }
 
 .card {
-  border: 2px solid white;
-  background-color: #ed7d31;
+  background-color: #ed7c31a8;
   margin-top: 10%;
   width: 50%;
   height: 300px;
   border-radius: 8px;
   box-shadow: 2px 2px 7px #f6f1ee;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+img {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 60px;
+}
+
+select {
 }
