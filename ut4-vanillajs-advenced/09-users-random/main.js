@@ -17,8 +17,10 @@ const citySpan = document.createElement("span");
 const timeSpan = document.createElement("span");
 const img = document.createElement("img");
 
+// Solo se crea una instancia y se reutiliza, usando los setters
 let person = new Person();
 
+// Contenendero para la información del usuario
 const card = document.createElement("div");
 card.className = "card";
 
