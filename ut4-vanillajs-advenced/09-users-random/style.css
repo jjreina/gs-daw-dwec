@@ -6,6 +6,7 @@
 
 body {
   font-family: "Courier New", Courier, monospace;
+
   background-color: #d2e0fb;
   color: #f6f1ee;
 }
@@ -42,5 +43,14 @@ img {
   border-radius: 60px;
 }
 
-select {
+button {
+  padding: 10px 10px 10px 10px;
+  background-color: #8eaccd;
+  border-radius: 10px;
+  border: 0px solid;
+  box-shadow: 2px 2px 7px #f6f1ee;
+  font-family: "Courier New", Courier, monospace;
+  color: #f6f1ee;
+  font-size: 16px;
+  cursor: pointer;
 }
