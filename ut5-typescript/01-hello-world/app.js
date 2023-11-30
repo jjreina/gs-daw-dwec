@@ -1,5 +1,13 @@
 "use strict";
-var _a;
-Object.defineProperty(exports, "__esModule", { value: true });
-let msg = "Hello World, TypeScript";
-console.log(((_a = msg[msg.length]) === null || _a === void 0 ? void 0 : _a.toLocaleUpperCase()) || "Valor fuera de rango");
+function sayHello_1(name) {
+    return `Hello ${name}`;
+}
+const sayHello = (name) => {
+    return `Hello ${name || "name viene vacío"} `;
+};
+sayHello();
+console.log(sayHello());
+const fullName = (name = "Juan", surname = "Reina") => {
+    return `${name} ${surname} `;
+};
+console.log(fullName());
