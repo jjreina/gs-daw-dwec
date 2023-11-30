@@ -15,3 +15,21 @@ const fullName = (name: string = "Juan", surname: string = "Reina"): string => {
 };
 
 console.log(fullName());
+
+/*let person: {
+  name: string,
+  surname: string,
+  getFullName: () => string
+}*/
+
+type Person = {
+  name: string;
+  surname: string;
+  getFullName: () => string;
+};
+
+let person: Person = {
+  name: "Juan",
+  surname: "Reina",
+  getFullName: () => `${person.name} ${person.surname}`,
+};
