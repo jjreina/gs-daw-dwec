@@ -1,0 +1,10 @@
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+h1 {
+  text-align: center;
+}
