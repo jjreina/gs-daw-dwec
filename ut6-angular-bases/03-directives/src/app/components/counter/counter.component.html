@@ -1,0 +1,16 @@
+<h1>{{ title }}</h1>
+<hr />
+<div class="container">
+  <p>Counter: {{ counter }}</p>
+  <button type="button" class="btn btn-outline-dark" (click)="increaseBy(-1)">
+    -
+  </button>
+  @if(counter !== 0) {
+  <button type="button" class="btn btn-outline-dark" (click)="reset()">
+    Reset
+  </button>
+  }
+  <button type="button" class="btn btn-outline-dark" (click)="increaseBy(+1)">
+    +
+  </button>
+</div>

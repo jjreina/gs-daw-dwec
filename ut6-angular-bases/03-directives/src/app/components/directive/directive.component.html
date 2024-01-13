@@ -1,0 +1,13 @@
+<hr />
+<div class="container">
+  <h1>{{ title }}</h1>
+  <div class="paragraph">
+    <p (mouseover)="mouseOverParagraphNgIf()">Working with *ngIf</p>
+    <p (mouseover)="mouseOverParagraphIf()">{{ directiveIfModern }}</p>
+  </div>
+  <p *ngIf="showNgIfText">Text displayed with ngIf directive</p>
+  @if (showIfText) {
+  <p>Text displayed with If directive</p>
+  }
+</div>
+<hr />
