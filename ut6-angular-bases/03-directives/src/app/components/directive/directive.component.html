@@ -9,5 +9,35 @@
   @if (showIfText) {
   <p>Text displayed with If directive</p>
   }
+  <h1>{{ title2 }}</h1>
+  <form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Name</label>
+      <input class="form-control" placeholder="Enter name" id="name" />
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Surname</label>
+      <input class="form-control" placeholder="Enter surname" id="surname" />
+    </div>
+    <div class="buttons">
+      <button (click)="logInOld()" type="button" class="btn btn-primary">
+        Log in by &lt;17v
+      </button>
+      <button (click)="logInNew()" type="button" class="btn btn-primary">
+        Log in by >=17v
+      </button>
+    </div>
+  </form>
+  <span *ngIf="loginOld; else elseBlock"
+    >{{ nameOld }} {{ surnameOld }} registered by <17v</span
+  >
+  <ng-template #elseBlock>
+    <span>No one registered by <17v</span>
+  </ng-template>
+  @if(loginNew) {
+  <span>{{ name }} {{ surname }} registered by >=17v</span>
+  } @else {
+  <span>No one registered by >=17v</span>
+  }
 </div>
 <hr />
