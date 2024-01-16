@@ -11,12 +11,9 @@ export class DirectiveComponent {
   public directiveIfModern: string = 'Working with @if';
   public showNgIfText: boolean = false;
   public showIfText: boolean = false;
+
   public loginOld: boolean = false;
   public loginNew: boolean = false;
-  public nameOld: string | undefined = '';
-  public surnameOld: string | undefined = '';
-  public name: string | undefined = '';
-  public surname: string | undefined = '';
 
   public mouseOverParagraphNgIf(): void {
     this.showNgIfText = !this.showNgIfText;
@@ -28,16 +25,13 @@ export class DirectiveComponent {
     this.showIfText = !this.showIfText;
   }
 
-  public logInOld(): void {
+  public logInOld(value: string): void {
     this.loginOld = true;
-    this.nameOld = document.querySelector<HTMLInputElement>('#name')?.value;
-    this.surnameOld =
-      document.querySelector<HTMLInputElement>('#surname')?.value;
+    this.loginNew = false;
   }
 
-  public logInNew(): void {
+  public logInNew(value: string): void {
     this.loginNew = true;
-    this.name = document.querySelector<HTMLInputElement>('#name')?.value;
-    this.surname = document.querySelector<HTMLInputElement>('#surname')?.value;
+    this.loginOld = false;
   }
 }
