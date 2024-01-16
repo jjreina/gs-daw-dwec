@@ -1,0 +1,20 @@
+<div>
+  <input type="text" class="form-control" placeholder="Enter Name" #inputName />
+  <button
+    type="button"
+    class="btn btn-secondary"
+    (click)="cliclEvent(inputName.value)"
+  >
+    Click Me!!
+  </button>
+  <span>Name: {{ inputName.value }}</span>
+  <hr />
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Enter Name"
+    #inputName2
+    (keyup)="(0)"
+  />
+  <span>Name: {{ inputName2.value }}</span>
+</div>
