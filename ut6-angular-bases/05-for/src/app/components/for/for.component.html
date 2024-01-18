@@ -1,0 +1,40 @@
+<div class="for">
+  <div class="for-list">
+    <h3>ngFor Directive</h3>
+    <ul class="list-group">
+      <li *ngFor="let car of cars; index as i" class="list-group-item">
+        <span
+          ><strong>Car {{ i + 1 }}:</strong></span
+        >
+        <br />
+        <span>{{ car.year }}</span>
+        <br />
+        <span>{{ car.make }}</span>
+        <br />
+        <span>{{ car.model }}</span>
+        <br />
+        <span>{{ car.type }}</span>
+      </li>
+    </ul>
+  </div>
+  <div class="for-list">
+    <h3>For Flow Control</h3>
+    <ul class="list-group">
+      @for(car of cars; track car.id; let i = $index) {
+      <li class="list-group-item">
+        <span
+          ><strong>Car {{ i + 1 }}:</strong></span
+        >
+        <br />
+        <span>{{ car.year }}</span>
+        <br />
+        <span>{{ car.make }}</span>
+        <br />
+        <span>{{ car.model }}</span>
+        <br />
+        <span>{{ car.type }}</span>
+      </li>
+      }
+    </ul>
+  </div>
+</div>

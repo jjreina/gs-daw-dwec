@@ -1,0 +1,19 @@
+.for {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.for-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h3 {
+  text-align: center;
+}
+
+ul {
+  width: 400px;
+}
