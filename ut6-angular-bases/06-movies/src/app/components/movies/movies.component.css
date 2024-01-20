@@ -1,0 +1,22 @@
+.movies-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 25vw;
+  object-fit: cover;
+}
+
+p {
+  text-wrap: balance;
+  margin-bottom: 0rem;
+  font-style: italic;
+}
+
+span {
+  text-wrap: balance;
+}
