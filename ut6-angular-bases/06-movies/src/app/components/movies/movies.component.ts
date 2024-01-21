@@ -1,6 +1,6 @@
 import { Movie } from './../../../interfaces/movieInterface';
 import { Component } from '@angular/core';
-import { moviesMock } from '../../../mock/moviesDataMovies';
+import { moviesMock } from '../../../mocks/moviesDataMovies';
 
 @Component({
   selector: 'app-components-movies',
