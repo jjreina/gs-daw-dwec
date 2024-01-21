@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.paragraph {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.paragraph > p {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0px 3px 0px 3px;
+  cursor: pointer;
+}
+
+.vertical {
+  border-left: 6px solid black;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+}
+
+.buttons {
+  display: flex;
+  align-self: center;
+  gap: 80px;
+  margin-top: 10px;
+}

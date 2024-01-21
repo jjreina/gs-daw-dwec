@@ -1,0 +1,53 @@
+<hr />
+<div class="container">
+  <h1>{{ title }}</h1>
+  <div class="paragraph">
+    <p (mouseover)="mouseOverParagraphNgIf()">Working with *ngIf</p>
+    <p (mouseover)="mouseOverParagraphIf()">{{ directiveIfModern }}</p>
+  </div>
+  <p *ngIf="showNgIfText">Text displayed with ngIf directive</p>
+  @if (showIfText) {
+  <p>Text displayed with If directive</p>
+  }
+  <h1>{{ title2 }}</h1>
+  <form>
+    <div class="form-group">
+      <label>Name</label>
+      <input class="form-control" placeholder="Enter name" #inputName />
+    </div>
+    <div class="form-group">
+      <label>Surname</label>
+      <input class="form-control" placeholder="Enter surname" #inputSurname />
+    </div>
+    <div class="buttons">
+      <button
+        (click)="logInOld(inputName.value)"
+        type="button"
+        class="btn btn-primary"
+      >
+        Log in by &lt;17v
+      </button>
+      <button
+        (click)="logInNew(inputSurname.value)"
+        type="button"
+        class="btn btn-primary"
+      >
+        Log in by >=17v
+      </button>
+    </div>
+  </form>
+  <span *ngIf="loginOld; else elseBlock"
+    >{{ inputName.value }} {{ inputSurname.value }} registered by <17v</span
+  >
+  <ng-template #elseBlock>
+    <span>No one registered by <17v</span>
+  </ng-template>
+  @if(loginNew) {
+  <span
+    >{{ inputName.value }} {{ inputSurname.value }} registered by >=17v</span
+  >
+  } @else {
+  <span>No one registered by >=17v</span>
+  }
+</div>
+<hr />
