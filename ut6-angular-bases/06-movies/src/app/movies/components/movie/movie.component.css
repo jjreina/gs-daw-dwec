@@ -13,3 +13,7 @@ p {
 span {
   text-wrap: balance;
 }
+
+.card-body {
+  min-height: 8vw;
+}
