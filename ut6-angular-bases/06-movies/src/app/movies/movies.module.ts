@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MoviesComponent } from './components/movies/movies.component';
+import { MoviesComponent } from './components/list-movies/list-movies.component';
 import { MovieComponent } from './components/movie/movie.component';
 import { MainPageComponent } from './pages/main-pages.component';
 
