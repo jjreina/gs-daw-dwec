@@ -5,4 +5,13 @@
     <p><strong>Premiere: </strong>{{ movie.year }}</p>
     <p><strong>Stars: </strong>{{ movie.stars }}</p>
   </div>
+  <div class="button-container">
+    <button
+      (click)="emitMovieTitle(movie.title)"
+      type="button"
+      class="btn btn-primary"
+    >
+      Click me
+    </button>
+  </div>
 </div>
