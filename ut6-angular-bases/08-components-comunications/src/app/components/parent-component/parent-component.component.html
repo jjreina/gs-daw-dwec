@@ -1,1 +1,7 @@
-<app-child-component [item]="value"></app-child-component>
+<h3>Parent Component</h3>
+<input type="text" class="form-control" #inputText />
+<hr />
+<app-child-component
+  [item]="value"
+  (newItemEvent)="inputText.value = $event"
+></app-child-component>
