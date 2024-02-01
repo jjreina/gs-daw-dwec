@@ -1,7 +1,12 @@
 <p>Value received from a parent component {{ item }}</p>
 <h3>Child Component</h3>
 <input type="text" class="form-control" #newItem />
-<!--(keyup)="addNewItem(newItem.value)"-->
+<!--
+  Este evento iria en la etiqueta input si queremos q al
+  ecribir en el input del hijo
+  se escriba a la vez en el input del padre
+  (keyup)="addNewItem(newItem.value)"
+-->
 <button
   (click)="addNewItem(newItem.value)"
   type="button"
