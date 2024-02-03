@@ -7,5 +7,5 @@ import { moviesMock } from '../mocks/moviesDataMovies';
   templateUrl: './main-pages.component.html',
 })
 export class MainPageComponent {
-  public movies: Movie[] = moviesMock;
+  // public movies: Movie[] = moviesMock;
 }
