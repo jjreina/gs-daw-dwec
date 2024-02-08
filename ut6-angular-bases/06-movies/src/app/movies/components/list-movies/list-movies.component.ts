@@ -22,4 +22,8 @@ export class MoviesComponent implements OnInit {
       this.movies = response.data;
     });
   }
+
+  public removeMovieById(idMovie: string) {
+    this.movies = this.moviesService.removeMovie(idMovie, this.movies);
+  }
 }

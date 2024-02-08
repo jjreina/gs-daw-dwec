@@ -4,6 +4,7 @@
   <app-movie
     [movie]="movie"
     (movieInfoEventEmitter)="h3.textContent = 'Movie Selected: ' + $event"
+    (movieIdEventEmitter)="removeMovieById($event)"
   ></app-movie>
   }
 </div>

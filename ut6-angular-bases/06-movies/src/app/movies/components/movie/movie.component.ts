@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Movie } from '../../interfaces/movieInterface';
+import { MoviesService } from '../../services/movies.service';
 
 @Component({
   selector: 'app-movie',
@@ -14,7 +15,14 @@ export class MovieComponent {
   public movieInfoEventEmitter: EventEmitter<string> =
     new EventEmitter<string>();
 
+  @Output()
+  public movieIdEventEmitter: EventEmitter<string> = new EventEmitter<string>();
+
   public emitMovieTitle(title: string): void {
     this.movieInfoEventEmitter.emit(title);
+  }
+
+  public emitRemoveMovie(idMovie: string): void {
+    this.movieIdEventEmitter.emit(idMovie);
   }
 }

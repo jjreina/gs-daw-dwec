@@ -7,11 +7,18 @@
   </div>
   <div class="button-container">
     <button
+      (click)="emitRemoveMovie(movie.id)"
+      type="button"
+      class="btn btn-danger"
+    >
+      Remove Movie
+    </button>
+    <button
       (click)="emitMovieTitle(movie.title)"
       type="button"
       class="btn btn-primary"
     >
-      Click me
+      Select Movie
     </button>
   </div>
 </div>

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Movie, MovieRespose } from '../interfaces/movieInterface';
 import { moviesMock } from '../mocks/moviesDataMovies';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 
 const url = 'https://imdb188.p.rapidapi.com/api/v1/searchIMDB?query=mission';
 const options = {
@@ -17,12 +17,18 @@ const options = {
   providedIn: 'root',
 })
 export class MoviesService {
-  //public movies: Movie[] = moviesMock;
-  public movies: Movie[] = [];
+  // public movies: Movie[] = moviesMock;
+  // public movies: Movie[] = [];
 
   constructor(private http: HttpClient) {}
 
-  getDataMovie(): Observable<MovieRespose> {
+  public getDataMovie(): Observable<MovieRespose> {
     return this.http.get<MovieRespose>(url, options);
+  }
+
+  public removeMovie(id: string, movies: Movie[]): Movie[] {
+    return movies.filter((movie: Movie) => {
+      return movie.id != id;
+    });
   }
 }

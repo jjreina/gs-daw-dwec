@@ -22,4 +22,5 @@ span {
   display: flex;
   align-self: flex-end;
   margin: 0px 10px 5px 0px;
+  gap: 5px;
 }
