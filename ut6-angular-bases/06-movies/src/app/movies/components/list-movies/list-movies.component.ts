@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Movie, MovieRespose } from '../../interfaces/movieInterface';
 import { MoviesService } from '../../services/movies.service';
 
@@ -7,7 +7,7 @@ import { MoviesService } from '../../services/movies.service';
   templateUrl: './list-movies.component.html',
   styleUrl: './list-movies.component.css',
 })
-export class MoviesComponent {
+export class MoviesComponent implements OnInit {
   // @Input() Comentamos esto porque se está usando un servicio para pasar los datos
   public movies: Movie[] = [];
 

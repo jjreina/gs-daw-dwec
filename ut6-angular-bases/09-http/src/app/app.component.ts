@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProvincesService } from './services/provinces.service';
 import { ProvincesResponse, Province } from './interfaces/provincesInterface';
 
@@ -7,7 +7,7 @@ import { ProvincesResponse, Province } from './interfaces/provincesInterface';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'http';
   public provinces: Province[] = [];
 
