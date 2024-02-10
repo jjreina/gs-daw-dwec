@@ -1,0 +1,10 @@
+<h3 #h3>Movie Selected:</h3>
+<div class="movies-container">
+  @for (movie of movies; track movie.id) {
+  <app-movie
+    [movie]="movie"
+    (movieInfoEventEmitter)="h3.textContent = 'Movie Selected: ' + $event"
+    (movieIdEventEmitter)="removeMovieById($event)"
+  ></app-movie>
+  }
+</div>

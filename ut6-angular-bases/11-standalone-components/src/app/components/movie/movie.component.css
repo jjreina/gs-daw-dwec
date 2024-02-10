@@ -1,0 +1,26 @@
+.card-img-top {
+  width: 100%;
+  height: 25vw;
+  object-fit: cover;
+}
+
+p {
+  text-wrap: balance;
+  margin-bottom: 0rem;
+  font-style: italic;
+}
+
+span {
+  text-wrap: balance;
+}
+
+.card-body {
+  min-height: 7vw;
+}
+
+.button-container {
+  display: flex;
+  align-self: flex-end;
+  margin: 0px 10px 5px 0px;
+  gap: 5px;
+}
