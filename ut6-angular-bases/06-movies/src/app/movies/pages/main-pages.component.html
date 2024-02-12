@@ -1,4 +1,7 @@
 <!-- Comentamos esta linea porque se está usando un servicio para pasar los datos
 <app-list-movies [movies]="movies"></app-list-movies>
 -->
-<app-list-movies></app-list-movies>
+<app-list-movies
+  [movies]="movies"
+  (removeEventEmitter)="removeMovieById($event)"
+></app-list-movies>
