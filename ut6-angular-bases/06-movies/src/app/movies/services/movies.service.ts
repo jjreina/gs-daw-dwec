@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Movie, MovieRespose } from '../interfaces/movieInterface';
 import { HttpClient } from '@angular/common/http';
-import { Observable, map } from 'rxjs';
+import { Observable } from 'rxjs';
 
 const url = 'https://imdb188.p.rapidapi.com/api/v1/searchIMDB?query=mission';
 const options = {
@@ -16,9 +16,6 @@ const options = {
   providedIn: 'root',
 })
 export class MoviesService {
-  // public movies: Movie[] = moviesMock;
-  // public movies: Movie[] = [];
-
   constructor(private http: HttpClient) {}
 
   public getDataMovie(): Observable<MovieRespose> {

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Movie, MovieRespose } from '../interfaces/movieInterface';
 import { MoviesService } from '../services/movies.service';
 
@@ -7,7 +7,6 @@ import { MoviesService } from '../services/movies.service';
   templateUrl: './main-pages.component.html',
 })
 export class MainPageComponent implements OnInit {
-  @Input()
   public movies: Movie[] = [];
 
   constructor(private moviesService: MoviesService) {}
