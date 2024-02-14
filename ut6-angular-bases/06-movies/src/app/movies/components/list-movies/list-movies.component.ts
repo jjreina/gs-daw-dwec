@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Movie, MovieRespose } from '../../interfaces/movieInterface';
+import { Movie } from '../../interfaces/movieInterface';
 import { MoviesService } from '../../services/movies.service';
 
 @Component({
